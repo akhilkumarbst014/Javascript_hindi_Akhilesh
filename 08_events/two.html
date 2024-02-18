@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Akhilesh Kumar");
+    // }, 2000)
+
+       //OR
+
+    // const sayAkhil = function(){
+    //     console.log("Akhilesh Kumar")
+    // }
+    // setTimeout(sayAkhil,2000)
+
+    //document.querySelector('h1').innerHTML = "BEST JS SERIES" // Ye Turant change kr dega 
+    // Par agar hum chate hai ki 2 sec baad print ho then we use
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "BEST JS SERIES"
+    }
+    const changeMe = setTimeout(changeText,2000);
+
+    // Agar hum chahate hai ki change hi na ho then we use clearTimeout
+
+    //clearTimeout(changeMe) 
+    
+    /* ye change hona rok dega */
+
+    /* Apply on event to stop the changes (that means agar aap ko event kro ge like press button then it will be stop)*/
+    
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("STOPPED")
+    })
+
+</script>
+</html>
